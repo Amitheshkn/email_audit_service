@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+import sys
+
+from email_audit_app.api import urls
+from email_audit_app.core.config import CONF
+
+
+def main():
+    try:
+        host = CONF.application.bind_host
+        port = CONF.application.bind_port
+        if not host or not port:
+            raise ValueError("Host and port must be specified in the configuration.")
+
+        urls.app.run(host, port, debug=True, threaded=True)
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

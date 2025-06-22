@@ -1,0 +1,26 @@
+Subject: Project Update
+From: employee@example.com
+To: customer@example.com
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============4715889393963652977=="
+
+--===============4715889393963652977==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hi team,
+
+Here is the latest project update. Please find the design image attached.
+
+Best,
+John
+
+--===============4715889393963652977==
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="design.jpg"
+MIME-Version: 1.0
+
+ZmFrZS1pbWFnZS1ieXRlcw==
+
+--===============4715889393963652977==--

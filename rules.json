@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Greeting Check",
+    "description": "Check if email starts with a greeting",
+    "condition": "any(email.get('body', '').lower().strip().startswith(greeting) for greeting in ['hello', 'hi', 'dear'])",
+    "score": 10,
+    "justification_pass": "Greeting found.",
+    "justification_fail": "No greeting found at the start of the email."
+  },
+  {
+    "name": "Clear Subject",
+    "description": "Check if subject line is present and not empty",
+    "condition": "email.get('subject', '').strip() != ''",
+    "score": 10,
+    "justification_pass": "Subject line is present.",
+    "justification_fail": "Subject line is missing or empty."
+  },
+  {
+    "name": "Professional Tone",
+    "description": "Ensure the email does not contain informal slang",
+    "condition": "not any(word in email.get('body', '').lower().split() for word in ['dude', 'yo', 'hey', 'wassup', 'gonna', 'wanna'])",
+    "score": 10,
+    "justification_pass": "Tone appears professional.",
+    "justification_fail": "Informal slang detected."
+  },
+  {
+    "name": "Attachment Check",
+    "description": "Verify email has at least one image attachment",
+    "condition": "any(str(att.get('filename', '')).lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.bmp')) for att in email.get('attachments', []))",
+    "score": 10,
+    "justification_pass": "Image attachment found.",
+    "justification_fail": "No image attachment found."
+  }
+]

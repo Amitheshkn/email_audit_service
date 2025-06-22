@@ -1,0 +1,24 @@
+Subject: Project Update
+From: employee@example.com
+To: customer@example.com
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7979383083337694776=="
+
+--===============7979383083337694776==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Please find the latest update and image.
+
+Thanks,
+John
+
+--===============7979383083337694776==
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="mockup.png"
+MIME-Version: 1.0
+
+ZmFrZS1pbWFnZS1ieXRlcw==
+
+--===============7979383083337694776==--

@@ -1,0 +1,25 @@
+Subject: What's up
+From: employee@example.com
+To: customer@example.com
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============2035797397458030336=="
+
+--===============2035797397458030336==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Yo dude,
+
+Here's that thing you asked for. Lemme know.
+
+Peace.
+
+--===============2035797397458030336==
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="pic.jpg"
+MIME-Version: 1.0
+
+ZmFrZS1pbWFnZS1ieXRlcw==
+
+--===============2035797397458030336==--
